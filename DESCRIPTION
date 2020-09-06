@@ -1,6 +1,6 @@
 Package: ggDCA
 Title: Calculate and Plot Decision Curve
-Version: 1.0
+Version: 1.1
 Authors@R: 
     c(
     person("Jing","Zhang",role = c("aut", "cre"),email = "zj391120@163.com"),
@@ -22,9 +22,9 @@ RoxygenNote: 7.1.1
 Imports: do, set, rms (>= 6.0.1), base.rms, survival (>= 3.1-12)
 Depends: R (>= 2.10), ggplot2
 NeedsCompilation: no
-Packaged: 2020-08-24 10:24:47 UTC; asus
+Packaged: 2020-09-06 15:46:31 UTC; asus
 Author: Jing Zhang [aut, cre],
   Zhi Jin [aut]
 Maintainer: Jing Zhang <zj391120@163.com>
 Repository: CRAN
-Date/Publication: 2020-08-24 15:50:14 UTC
+Date/Publication: 2020-09-06 16:10:02 UTC

@@ -133,8 +133,9 @@ thresholds.cph <- function(fit,time='median',model.name=NULL,new.data=NULL,test.
     filter.data=lapply(filter, function(i) data[i,])
     txt=paste0('survfit(',names(fit$model)[1],'~1,data=i)')
     survfitted=lapply(filter.data, function(i) eval(parse(text=txt)))
-    TPR.row=1-sapply(survfitted, function(i) ifelse(is.null(summary(i,time)$surv),
-                                                  0,summary(i,time)$surv))
+    TPR.row=1-sapply(survfitted, function(i) ifelse(is.null(tryCatch(summary(i,time)$surv, error=function(e) 0)),
+                                                    0,
+                                                    summary(i,time)$surv))
     FPR.row=1-TPR.row
     TP=pred.Positive*TPR.row
     FP=pred.Positive*FPR.row
